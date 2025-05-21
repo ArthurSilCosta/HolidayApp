@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+   <LinearLayout
+       android:id="@+id/formNovaFicha"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:padding="16dp">
+    <TextView
+        android:id="@+id/label_sitio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sítio"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/input_sitio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Digite o nome do sítio arqueológico" />
+
+    <!-- Campo Localização (manual) -->
+    <TextView
+        android:id="@+id/label_localizacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Localização (descrição)"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/input_localizacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Descreva a localização ou referência" />
+    <!-- Campo Quadra -->
+    <TextView
+        android:id="@+id/label_quadra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quadra"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/input_quadra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Digite a quadra (ex: A1, B2)" />
+
+    <!-- Campo Profundidade -->
+    <TextView
+        android:id="@+id/label_profundidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profundidade"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/input_profundidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Ex: 30cm ou 1,5m" />
+    <!-- Campo Pesquisador -->
+    <TextView
+        android:id="@+id/label_pesquisador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pesquisador"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/input_pesquisador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Nome do pesquisador(a)" />
+    <!-- Campo Data -->
+    <TextView
+        android:id="@+id/label_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/input_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:focusable="false"
+        android:clickable="true"
+        android:hint="Selecione a data" />
+
+    <!-- Cor do Solo -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cor do solo" />
+
+    <EditText
+        android:id="@+id/input_cor_solo"
+        android:minHeight="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Ex: marrom escuro" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estruturas"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_estrutura_presente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estrutura presente" />
+
+    <EditText
+        android:id="@+id/input_estrutura_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descreva a estrutura"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:padding="8dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Artefato"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_tipos_artefato"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <CheckBox android:id="@+id/check_ceramica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cerâmica"/>
+     <CheckBox android:id="@+id/check_vidro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vidro"/>
+     <CheckBox android:id="@+id/check_faiança" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Faiança"/>
+     <CheckBox android:id="@+id/check_ferro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ferro"/>
+     <CheckBox android:id="@+id/check_outros" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Outros"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Textura do Solo"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_textura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <RadioButton android:id="@+id/radio_arenosa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arenosa"/>
+     <RadioButton android:id="@+id/radio_argilosa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Argilosa"/>
+     <RadioButton android:id="@+id/radio_siltosa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Siltosa"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coloração do Solo"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_coloracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <RadioButton android:id="@+id/radio_clara" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clara"/>
+     <RadioButton android:id="@+id/radio_media" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Média"/>
+     <RadioButton android:id="@+id/radio_escura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Escura"/>
+    </RadioGroup>
+
+
+    <!-- Textura -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Textura" />
+
+    <EditText
+        android:id="@+id/input_textura"
+        android:layout_width="match_parent"
+        android:minHeight="48dp"
+        android:layout_height="wrap_content"
+        android:hint="Arenosa, argilosa, etc." />
+
+    <!-- Estruturas -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estruturas" />
+
+    <EditText
+        android:id="@+id/input_estruturas"
+        android:layout_width="match_parent"
+        android:minHeight="48dp"
+        android:layout_height="wrap_content"
+        android:hint="Muros, fossas, fundações..." />
+
+    <!-- Material Arqueológico -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Material arqueológico" />
+
+    <EditText
+        android:id="@+id/input_material_arqueologico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cerâmica, ossos, etc." />
+
+    <!-- Restos Orgânicos -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restos orgânicos" />
+
+    <EditText
+        android:id="@+id/input_restos_organicos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: carvão, sementes, etc." />
+    <!-- Observações -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Observações adicionais" />
+
+    <EditText
+        android:id="@+id/input_observacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notas complementares, contexto, etc."
+        android:minHeight="80dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="4" />
+    <Button
+        android:id="@+id/btn_salvar_ficha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Salvar Ficha"
+        android:minHeight="48dp" />
+    <Button
+        android:id="@+id/btn_voltar_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retornar ao Menu"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btn_excluir_ficha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir ficha"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Croqui"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_foto_croqui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tirar foto do croqui" />
+
+    <Button
+        android:id="@+id/btn_desenhar_croqui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desenhar croqui" />
+
+    <ImageView
+        android:id="@+id/img_croqui"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Visualização do croqui" />
+
+
+   </LinearLayout>
+</ScrollView>
+
