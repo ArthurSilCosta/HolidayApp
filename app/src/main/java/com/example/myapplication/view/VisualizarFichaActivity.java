@@ -3,6 +3,8 @@ package com.example.myapplication.view;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.R;
@@ -16,6 +18,7 @@ public class VisualizarFichaActivity extends AppCompatActivity {
 
     private TextView txtSitio, txtLocalizacao, txtQuadra, txtProfundidade, txtPesquisador, txtData;
     private TextView txtCorSolo, txtTextura, txtEstruturas, txtMaterial, txtRestos, txtObservacoes;
+    private TextView txtLatitude, txtLongitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,9 @@ public class VisualizarFichaActivity extends AppCompatActivity {
         txtMaterial = findViewById(R.id.txt_material);
         txtRestos = findViewById(R.id.txt_restos);
         txtObservacoes = findViewById(R.id.txt_observacoes);
+        txtLatitude = findViewById(R.id.txt_latitude);
+        txtLongitude = findViewById(R.id.txt_longitude);
+
 
         if (ficha != null) {
             txtSitio.setText("Sítio: " + ficha.getSitio());
@@ -53,6 +59,21 @@ public class VisualizarFichaActivity extends AppCompatActivity {
             txtMaterial.setText("Material arqueológico: " + ficha.getMaterialArqueologico());
             txtRestos.setText("Restos orgânicos: " + ficha.getRestosOrganicos());
             txtObservacoes.setText("Observações: " + ficha.getObservacoes());
+            ImageView iconSemGPS = findViewById(R.id.icon_sem_gps);
+
+            if (ficha.getLatitude() == -999.999 && ficha.getLongitude() == -999.999) {
+                txtLatitude.setText("Latitude: não disponível");
+                txtLongitude.setText("Longitude: não disponível");
+                iconSemGPS.setVisibility(View.VISIBLE);
+            } else {
+                txtLatitude.setText("Latitude: " + ficha.getLatitude());
+                txtLongitude.setText("Longitude: " + ficha.getLongitude());
+                iconSemGPS.setVisibility(View.GONE);
+            }
+
+            TextView txtDataFoto = findViewById(R.id.txt_data_foto_croqui);
+            txtDataFoto.setText("Data da foto: " + ficha.getDataFotoCroqui());
+
         }
 
 

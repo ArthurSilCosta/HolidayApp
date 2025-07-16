@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foto Arqueológica"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_tirar_foto"
+            android:text="Tirar Foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:id="@+id/input_legenda"
+            android:hint="Legenda da foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <View android:layout_height="1dp" android:layout_width="match_parent" android:background="#CCC" android:layout_marginTop="16dp"/>
+
+
+        <EditText
+            android:id="@+id/input_titulo_croqui"
+            android:hint="Título do croqui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/input_anotacao_croqui"
+            android:hint="Anotação breve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/input_data_foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data da Foto/Croqui (AAAA-MM-DD)"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btn_voltar_foto_croqui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Voltar"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btn_desenhar_croqui"
+            android:text="Desenhar Croqui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCC"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btn_salvar_foto_croqui"
+            android:text="Salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

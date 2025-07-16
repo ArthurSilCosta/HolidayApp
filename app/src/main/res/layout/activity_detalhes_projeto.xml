@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/txt_titulo_projeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Projeto: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <Button
+        android:id="@+id/btn_sitios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sítios Arqueológicos" />
+
+    <Button
+        android:id="@+id/btn_artefatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artefatos"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btn_gis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informações GIS"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btn_anotacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anotações Gerais"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btn_fotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fotos e Croquis"
+        android:layout_marginTop="12dp" />
+    <Button
+        android:id="@+id/btn_menu_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu Principal"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

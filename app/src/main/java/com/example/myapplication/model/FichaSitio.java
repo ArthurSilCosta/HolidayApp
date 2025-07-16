@@ -1,84 +1,36 @@
 package com.example.myapplication.model;
 
-import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 import java.util.UUID;
-import java.util.Date;
 
-public class Ficha extends RealmObject {
-    private boolean estruturaPresente;
-    private String estruturaDescricao;
+public class FichaSitio extends RealmObject {
+
     @PrimaryKey
     private String id = UUID.randomUUID().toString();
 
-    private RealmList<String> tiposArtefato;
-    private String texturaSolo;
-    private String coloracaoSolo;
-
-    public RealmList<String> getTiposArtefato() {
-        return tiposArtefato;
-    }
-    public void setTiposArtefato(RealmList<String> tiposArtefato) {
-        this.tiposArtefato = tiposArtefato;
-    }
-
-    public String getTexturaSolo() {
-        return texturaSolo;
-    }
-    public void setTexturaSolo(String texturaSolo) {
-        this.texturaSolo = texturaSolo;
-    }
-
-    public String getColoracaoSolo() {
-        return coloracaoSolo;
-    }
-    public void setColoracaoSolo(String coloracaoSolo) {
-        this.coloracaoSolo = coloracaoSolo;
-    }
-
+    private String idProjeto;
     private String sitio;
     private String localizacao;
     private String quadra;
     private String profundidade;
     private String pesquisador;
     private String dataTexto;
-
     private String corSolo;
     private String textura;
     private String estruturas;
     private String materialArqueologico;
     private String restosOrganicos;
     private String observacoes;
-    private String caminhoCroqui;
     private double latitude;
     private double longitude;
 
-    public String getCaminhoCroqui() {
-        return caminhoCroqui;
-    }
-
-    public void setCaminhoCroqui(String caminhoCroqui) {
-        this.caminhoCroqui = caminhoCroqui;
-    }
-
-    public boolean isEstruturaPresente() {
-        return estruturaPresente;
-    }
-    public void setEstruturaPresente(boolean estruturaPresente) {
-        this.estruturaPresente = estruturaPresente;
-    }
-
-    public String getEstruturaDescricao() {
-        return estruturaDescricao;
-    }
-    public void setEstruturaDescricao(String estruturaDescricao) {
-        this.estruturaDescricao = estruturaDescricao;
-    }
-
-    // Getters e Setters obrigatórios
+    // Getters e Setters
     public String getId() { return id; }
+
+    public String getIdProjeto() { return idProjeto; }
+    public void setIdProjeto(String idProjeto) { this.idProjeto = idProjeto; }
 
     public String getSitio() { return sitio; }
     public void setSitio(String sitio) { this.sitio = sitio; }
@@ -115,29 +67,10 @@ public class Ficha extends RealmObject {
 
     public String getObservacoes() { return observacoes; }
     public void setObservacoes(String observacoes) { this.observacoes = observacoes; }
-    private String dataFotoCroqui;
 
-    public String getDataFotoCroqui() {
-        return dataFotoCroqui;
-    }
-    public void setDataFotoCroqui(String dataFotoCroqui) {
-        this.dataFotoCroqui = dataFotoCroqui;
-    }
+    public double getLatitude() { return latitude; }
+    public void setLatitude(double latitude) { this.latitude = latitude; }
 
-
-    public double getLatitude() {
-        return latitude;
-    }
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
-
-
+    public double getLongitude() { return longitude; }
+    public void setLongitude(double longitude) { this.longitude = longitude; }
 }
