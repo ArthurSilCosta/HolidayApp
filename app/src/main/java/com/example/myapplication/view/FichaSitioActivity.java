@@ -16,13 +16,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import android.Manifest;
-import android.content.pm.PackageManager;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import android.location.Location;
-
 
 
 import com.example.myapplication.R;
@@ -30,8 +26,6 @@ import com.example.myapplication.api.FichaSitioDTO;
 import com.example.myapplication.api.SitioService;
 import com.example.myapplication.model.FichaSitio;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 import java.util.UUID;
 
 import io.realm.Realm;
@@ -137,27 +131,24 @@ public class FichaSitioActivity extends AppCompatActivity {
             String textura = campoTextura.getText().toString().trim();
             String corSolo = campoCorSolo.getText().toString().trim();
             String nomeTexto = campoSitio.getText().toString().trim();
-            if (nomeTexto.isEmpty()) {
-                inputNome.setError("Nome do sítio é obrigatório");
-                return;
-            }
+
 
 // Limites de caracteres
             if (nomeTexto.length() > 100) {
-                inputNome.setError("Máximo de 100 caracteres");
+                inputNome.setError(getString(R.string.error_max_name));
                 return;
             }
             if (localizacao.isEmpty()) {
-                campoLocalizacao.setError("Localização é obrigatória");
+                campoLocalizacao.setError(getString(R.string.error_location));
 
             }
             if (estruturas.length() > 300) {
-                campoDescricaoGeral.setError("Máximo de 300 caracteres");
+                campoDescricaoGeral.setError(getString(R.string.max_structure_lenght));
                 return;
             }
             // Campos obrigatórios
             if (nomeTexto.isEmpty()) {
-                inputNome.setError("Nome do sítio é obrigatório");
+                inputNome.setError(getString(R.string.error_site_name_required));
                 return;
             }
 
@@ -174,11 +165,9 @@ public class FichaSitioActivity extends AppCompatActivity {
                 ficha.setEstruturas(estruturas);
                 ficha.setTextura(textura);
                 ficha.setCorSolo(corSolo);
-                ficha.setLatitude(0.0);  // por enquanto
-                ficha.setLongitude(0.0); // por enquanto
             }, () -> {
                 Log.d("REALM", "✅ Ficha de Sítio salva localmente com sucesso");
-                Toast.makeText(this, "Ficha salva!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.toast_site_saved), Toast.LENGTH_SHORT).show();
                 String id = UUID.randomUUID().toString();
                 String dataAtual = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).format(new Date());
 
@@ -216,7 +205,7 @@ public class FichaSitioActivity extends AppCompatActivity {
 
                 finish();
             }, error -> {
-                Log.e("REALM", "❌ Erro ao salvar ficha de sítio", error);
+                Log.e("REALM", getString(R.string.toast_site_save_error), error);
             });
         });
     }
@@ -231,7 +220,7 @@ public class FichaSitioActivity extends AppCompatActivity {
             Log.d("LOCALIZACAO", "obterLocalizacao() foi chamado");
 
         }else {
-            Toast.makeText(this, "Permissão de localização negada.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.toast_location_not_found), Toast.LENGTH_LONG).show();
         }
     }
 

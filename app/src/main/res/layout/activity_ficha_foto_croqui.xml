@@ -12,12 +12,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Foto Arqueológica"
+            android:text="@string/photo_title"
             android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btn_tirar_foto"
-            android:text="Tirar Foto"
+            android:text="@string/take_photo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -31,7 +31,7 @@
 
         <EditText
             android:id="@+id/input_legenda"
-            android:hint="Legenda da foto"
+            android:text="@string/photo_caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"/>
@@ -41,13 +41,13 @@
 
         <EditText
             android:id="@+id/input_titulo_croqui"
-            android:hint="Título do croqui"
+            android:hint="@string/sketch_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <EditText
             android:id="@+id/input_anotacao_croqui"
-            android:hint="Anotação breve"
+            android:hint="@string/sketch_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -55,7 +55,7 @@
             android:id="@+id/input_data_foto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Data da Foto/Croqui (AAAA-MM-DD)"
+            android:hint="@string/photo_date"
             android:focusable="false"
             android:clickable="true"
             android:padding="12dp" />
@@ -64,12 +64,12 @@
             android:id="@+id/btn_voltar_foto_croqui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="← Voltar"
+            android:drawableLeft="@drawable/baseline_arrow_back_24"
             android:layout_margin="8dp"/>
 
         <Button
             android:id="@+id/btn_desenhar_croqui"
-            android:text="Desenhar Croqui"
+            android:text="@string/draw_sketch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"/>
@@ -82,7 +82,7 @@
 
         <Button
             android:id="@+id/btn_salvar_foto_croqui"
-            android:text="Salvar"
+            android:text="@string/save_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"/>

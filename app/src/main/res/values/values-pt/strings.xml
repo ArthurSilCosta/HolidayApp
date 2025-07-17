@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">Aplicativo de Arqueologia</string>
+
+    <!-- Menu Projetos -->
+    <string name="hint_project_name">Nome do Projeto</string>
+    <string name="dialog_new_project">Novo Projeto</string>
+    <string name="btn_create">Criar</string>
+    <string name="btn_cancel">Cancelar</string>
+
+    <!-- Mensagens de erro -->
+    <string name="error_invalid_project_name">Digite um nome válido para o projeto</string>
+    <string name="error_project_name_required">Nome obrigatório</string>
+    <string name="error_project_duplicate">Já existe um projeto com esse nome</string>
+    <string name="error_project_create">Erro ao criar projeto.</string>
+
+    <!-- Categorias -->
+    <string name="category">Categoria:</string>
+    <string name="photos">Fotos</string>
+    <string name="sketches">Croquis</string>
+    <string name="take_photo">Tirar Foto</string>
+    <string name="draw_sketch">Desenhar Croqui</string>
+    <string name="create_new_record">Criar Nova Ficha</string>
+    <string name="back_to_project">Voltar ao Projeto</string>
+    <string name="main_menu">Menu Principal</string>
+
+    <!-- Toasts -->
+    <string name="toast_category_not_implemented">
+        Criação de ficha ainda não implementada para esta categoria.
+    </string>
+    <string name="save_button">Salvar</string>
+    <string name="back_to_category">Voltar</string>
+
+    <!-- Ficha Sítio -->
+    <string name="site_name">Nome do Sítio</string>
+    <string name="location">Localização</string>
+    <string name="researcher">Pesquisador</string>
+    <string name="description">Descrição</string>
+    <string name="soil_colour">Coloração do Solo</string>
+    <string name="soil_type">Tipo de Solo</string>
+    <string name="date_record">Data de Registro</string>
+
+    <!-- Erros Ficha Sítio -->
+    <string name="error_site_name_required">Nome do sítio é obrigatório</string>
+    <string name="error_location_required">Localização é obrigatória</string>
+    <string name="error_description_max">Máximo de 300 caracteres</string>
+    <string name="error_location">Localização não encontrada</string>
+    <string name="max_structure_length">Descrição muito longa</string>
+    <string name="error_max_name">O nome não pode ser tão longo</string>
+
+    <!-- Toasts Ficha Sítio -->
+    <string name="toast_site_saved">Sítio salvo com sucesso!</string>
+    <string name="toast_site_save_error">Erro ao salvar sítio</string>
+    <string name="artifact_description">Descrição do artefato</string>
+    <string name="artifact_type">Tipo</string>
+    <string name="artifact_material">Material</string>
+    <string name="artifact_dimensions">Dimensões</string>
+    <string name="artifact_context">Contexto arqueológico</string>
+    <string name="artifact_discovery_date">Data da descoberta</string>
+    <string name="save_artifact">Salvar Artefato</string>
+    <string name="gis_data_type">Tipo de Dado</string>
+    <string name="gis_coordinates">Coordenadas (lat, long)</string>
+    <string name="gis_source">Fonte</string>
+    <string name="gis_description">Descrição</string>
+    <string name="gis_data_date">Data da Informação (AAAA-MM-DD)</string>
+    <string name="save_gis">Salvar Ficha GIS</string>
+
+    <string name="error_gis_type_required">Tipo de dado é obrigatório</string>
+    <string name="error_gis_type_max">Máximo de 100 caracteres</string>
+    <string name="error_gis_coordinates_required">Coordenadas são obrigatórias</string>
+    <string name="error_gis_coordinates_format">Formato inválido. Use: lat, long</string>
+    <string name="error_gis_source_max">Máximo de 100 caracteres</string>
+    <string name="error_gis_description_max">Máximo de 300 caracteres</string>
+    <string name="error_gis_date_required">Data obrigatória</string>
+
+    <string name="toast_gis_saved">Ficha GIS salva com sucesso!</string>
+    <string name="toast_gis_save_error">Erro ao salvar ficha GIS</string>
+    <string name="photo_title">Foto Arqueológica</string>
+    <string name="take_photo">Tirar Foto</string>
+    <string name="photo_caption">Legenda da foto</string>
+    <string name="sketch_title">Título do croqui</string>
+    <string name="sketch_note">Anotação breve</string>
+    <string name="photo_date">Data da Foto/Croqui (AAAA-MM-DD)</string>
+    <string name="back_arrow_with_text">← Voltar</string>
+
+    <string name="error_take_photo_first">Tire uma foto antes de salvar</string>
+    <string name="error_photo_date_required">Data obrigatória</string>
+    <string name="toast_photo_saved">Ficha salva com sucesso!</string>
+    <string name="toast_photo_save_error">Erro ao salvar ficha</string>
+    <string name="save_sketch">Salvar Croqui</string>
+    <string name="error_artifact_description_required">Descrição é obrigatória</string>
+    <string name="error_artifact_description_max">Máximo de 300 caracteres</string>
+    <string name="error_artifact_type_required">Tipo é obrigatório</string>
+    <string name="error_artifact_type_max">Máximo de 100 caracteres</string>
+    <string name="error_artifact_dimensions_max">Máximo de 50 caracteres</string>
+    <string name="error_artifact_context_max">Máximo de 300 caracteres</string>
+    <string name="project_title">Projeto:</string>
+    <string name="archaeological_sites">Sítios Arqueológicos</string>
+    <string name="artifacts">Artefatos</string>
+    <string name="gis_information">Informações GIS</string>
+    <string name="general_notes">Anotações Gerais</string>
+    <string name="photos_and_sketches">Fotos e Croquis</string>
+
+    <string name="toast_artifact_saved">Artefato salvo com sucesso!</string>
+    <string name="toast_artifact_save_error">Erro ao salvar artefato</string>
+    <string name="note_title">Título</string>
+    <string name="note_content">Conteúdo</string>
+    <string name="note_date">Data</string>
+    <string name="save_note">Salvar Anotação</string>
+
+    <string name="error_note_title_required">Título é obrigatório</string>
+    <string name="error_note_content_required">Conteúdo é obrigatório</string>
+    <string name="error_note_content_max">Máximo de 300 caracteres</string>
+
+    <string name="toast_note_saved">Anotação salva com sucesso!</string>
+    <string name="toast_note_save_error">Erro ao salvar anotação</string>
+
+
+</resources>

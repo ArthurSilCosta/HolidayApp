@@ -10,7 +10,7 @@
         android:id="@+id/txt_titulo_projeto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Projeto: "
+        android:text="@string/project_title"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
@@ -21,40 +21,46 @@
         android:id="@+id/btn_sitios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sítios Arqueológicos" />
+        android:text="@string/archaeological_sites" />
 
     <Button
         android:id="@+id/btn_artefatos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Artefatos"
+        android:text="@string/artifacts"
         android:layout_marginTop="12dp" />
 
     <Button
         android:id="@+id/btn_gis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Informações GIS"
+        android:text="@string/gis_information"
         android:layout_marginTop="12dp" />
 
     <Button
         android:id="@+id/btn_anotacoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anotações Gerais"
+        android:text="@string/general_notes"
         android:layout_marginTop="12dp" />
+    <Button
+        android:id="@+id/btn_gerar_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/generate_pdf"
+        android:layout_marginTop="12dp"/>
 
     <Button
         android:id="@+id/btn_fotos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fotos e Croquis"
+        android:text="@string/photos_and_sketches"
         android:layout_marginTop="12dp" />
     <Button
         android:id="@+id/btn_menu_principal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menu Principal"
+        android:text="@string/main_menu"
         android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal" />
 

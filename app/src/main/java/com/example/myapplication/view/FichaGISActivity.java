@@ -117,33 +117,33 @@ public class FichaGISActivity extends AppCompatActivity {
 
             // Tipo de dado
             if (t.isEmpty()) {
-                tipo.setError("Tipo de dado é obrigatório");
+                tipo.setError(getString(R.string.error_gis_type_required));
                 return;
             }
             if (t.length() > 100) {
-                tipo.setError("Máximo de 100 caracteres");
+                tipo.setError(getString(R.string.error_gis_type_max));
                 return;
             }
 
             // Coordenadas
             if (c.isEmpty()) {
-                campoCoordenadas.setError("Coordenadas são obrigatórias");
+                campoCoordenadas.setError(getString(R.string.error_coordinate_required));
                 return;
             }
             if (!c.matches("^-?\\d+(\\.\\d+)?(,\\s*-?\\d+(\\.\\d+)?)?$")) {
-                campoCoordenadas.setError("Formato inválido. Use: lat, long (ex: -23.5, -46.6)");
+                campoCoordenadas.setError(getString(R.string.error_coordinate_match));
                 return;
             }
 
             // Fonte (opcional)
             if (f.length() > 100) {
-                fonte.setError("Máximo de 100 caracteres");
+                fonte.setError(getString(R.string.error_source_max));
                 return;
             }
 
             // Descrição (opcional)
             if (d.length() > 300) {
-                descricao.setError("Máximo de 300 caracteres");
+                descricao.setError(getString(R.string.error_description_max));
                 return;
             }
             String dataTexto = inputData.getText().toString().trim();
@@ -165,7 +165,7 @@ public class FichaGISActivity extends AppCompatActivity {
                 ficha.setData(dataTexto);
 
             }, () -> {
-                Toast.makeText(this, "Ficha GIS salva!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.toast_gis_saved), Toast.LENGTH_SHORT).show();
                  String dataAtual = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).format(new Date());
 
 

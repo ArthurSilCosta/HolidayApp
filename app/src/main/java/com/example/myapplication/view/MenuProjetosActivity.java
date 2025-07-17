@@ -1,5 +1,7 @@
 package com.example.myapplication.view;
 
+import static android.app.ProgressDialog.show;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -70,18 +72,18 @@ public class MenuProjetosActivity extends AppCompatActivity {
 
     private void mostrarDialogCriarProjeto() {
         EditText input = new EditText(this);
-        input.setHint("Nome do Projeto");
+        input.setHint(getString(R.string.hint_project_name)); // Nome do Projeto
         input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(50)}); // limite de 50 caracteres
 
         new AlertDialog.Builder(this)
-                .setTitle("Novo Projeto")
+                .setTitle(getString(R.string.dialog_new_project))
                 .setView(input)
-                .setPositiveButton("Criar", (dialog, which) -> {
+                .setPositiveButton(getString(R.string.btn_create), (dialog, which) -> {
                     String nome = input.getText().toString().trim();
 
                     if (nome.isEmpty()) {
-                        Toast.makeText(this, "Digite um nome válido para o projeto", Toast.LENGTH_SHORT).show();
-                        input.setError("Nome obrigatório");
+                        Toast.makeText(this, getString(R.string.error_invalid_project_name), Toast.LENGTH_SHORT).show();
+                        input.setError(getString(R.string.error_project_name_required));
                         return;
                     }
 
@@ -90,14 +92,14 @@ public class MenuProjetosActivity extends AppCompatActivity {
                             .findFirst();
 
                     if (existente != null) {
-                        Toast.makeText(this, "Já existe um projeto com esse nome", Toast.LENGTH_SHORT).show();
-                        input.setError("Projeto duplicado");
+                        Toast.makeText(this, getString(R.string.error_project_duplicate), Toast.LENGTH_SHORT).show();
+                        input.setError(getString(R.string.error_project_duplicate));
                         return;
                     }
 
                     salvarProjeto(nome);
                 })
-                .setNegativeButton("Cancelar", null)
+                .setNegativeButton(getString(R.string.btn_cancel), null)
                 .show();
     }
 
@@ -144,7 +146,7 @@ public class MenuProjetosActivity extends AppCompatActivity {
             carregarProjetos(); // Atualiza lista após salvar
         }, error -> {
             Log.e("REALM", "❌ Erro ao salvar projeto: ", error);
-            Toast.makeText(this, "Erro ao criar projeto.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_project_create), Toast.LENGTH_SHORT).show();
         });
     }
 

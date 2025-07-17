@@ -110,7 +110,7 @@ public class FichaFotoCroquiActivity extends AppCompatActivity {
 
     private void salvarFicha() {
         if (fotoBitmap == null) {
-            Toast.makeText(this, "Tire uma foto antes de salvar.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_take_photo_first), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -123,11 +123,11 @@ public class FichaFotoCroquiActivity extends AppCompatActivity {
             return;
         }
         if (titulo.isEmpty()) {
-            inputTituloCroqui.setError("Título é obrigatório");
+            inputTituloCroqui.setError(getString(R.string.error_photo_date_required));
             return;
         }
         if (legenda.length() > 150) {
-            inputLegenda.setError("Máximo de 150 caracteres");
+            inputLegenda.setError(getString(R.string.error_subitles_max));
             return;
         }
 
@@ -157,7 +157,7 @@ public class FichaFotoCroquiActivity extends AppCompatActivity {
             ficha.setData(dataTexto);
 
         }, () -> {
-            Toast.makeText(this, "Ficha salva com sucesso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.toast_photo_saved), Toast.LENGTH_SHORT).show();
 
             // 2. Envia para o MongoDB
             Log.d("DEBUG", "ID Projeto: " + idProjeto);

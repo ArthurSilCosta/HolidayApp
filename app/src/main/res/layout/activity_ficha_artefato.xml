@@ -11,41 +11,42 @@
 
         <EditText
             android:id="@+id/input_descricao"
+            android:hint="@string/artifact_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="300"
-            android:hint="Descrição do artefato" />
+            />
 
         <EditText
             android:id="@+id/input_tipo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="100"
-            android:hint="Tipo" />
+            android:hint="@string/artifact_type" />
 
         <EditText
             android:id="@+id/input_material"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Material" />
+            android:hint="@string/artifact_material" />
 
         <EditText
             android:id="@+id/input_dimensoes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Dimensões" />
+            android:hint="@string/artifact_dimensions" />
 
         <EditText
             android:id="@+id/input_contexto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contexto arqueológico" />
+            android:hint="@string/artifact_context" />
 
         <EditText
             android:id="@+id/input_data_descoberta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Data da descoberta"
+            android:hint="@string/artifact_discovery_date"
             android:focusable="false"
             android:clickable="true"
             />
@@ -54,14 +55,14 @@
             android:id="@+id/btn_salvar_artefato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Salvar Artefato"
+            android:text="@string/save_artifact"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"/>
         <Button
             android:id="@+id/btn_voltar_categoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="←"
+            android:drawableLeft="@drawable/baseline_arrow_back_24"
             android:textSize="20sp"
             android:layout_margin="8dp"
             android:background="@android:color/transparent"

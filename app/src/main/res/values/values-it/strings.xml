@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">App di Archeologia</string>
+
+    <string name="hint_project_name">Nome del progetto</string>
+    <string name="dialog_new_project">Nuovo progetto</string>
+    <string name="btn_create">Crea</string>
+    <string name="btn_cancel">Annulla</string>
+
+    <string name="error_invalid_project_name">Inserisci un nome di progetto valido</string>
+    <string name="error_project_name_required">Nome richiesto</string>
+    <string name="error_project_duplicate">Esiste già un progetto con questo nome</string>
+    <string name="error_project_create">Errore durante la creazione del progetto.</string>
+
+    <string name="category">Categoria:</string>
+    <string name="photos">Foto</string>
+    <string name="sketches">Schizzi</string>
+    <string name="draw_sketch">Disegna uno schizzo</string>
+    <string name="create_new_record">Crea un nuovo record</string>
+    <string name="back_to_project">Torna al progetto</string>
+    <string name="main_menu">Menu principale</string>
+    <string name="toast_category_not_implemented">
+        La creazione di record non è ancora implementata per questa categoria.
+    </string>
+
+    <string name="error_location">Posizione non trovata</string>
+    <string name="max_structure_lenght">Descrizione troppo lunga</string>
+    <string name="save_button">Salva</string>
+    <string name="error_dimension_max">Massimo 50 caratteri</string>
+    <string name="back_to_category">Indietro</string>
+    <string name="site_name">Nome del sito</string>
+    <string name="location">Posizione</string>
+    <string name="researcher">Ricercatore</string>
+    <string name="error_context_max">Massimo 300 caratteri</string>
+    <string name="description">Descrizione</string>
+    <string name="soil_colour">Colore del suolo</string>
+    <string name="soil_type">Tipo di suolo</string>
+    <string name="error_site_name_required">Il nome del sito è obbligatorio</string>
+    <string name="error_location_required">La posizione è obbligatoria</string>
+    <string name="error_description_max">Massimo 300 caratteri</string>
+    <string name="toast_site_saved">Sito salvato con successo</string>
+    <string name="toast_site_save_error">Errore durante il salvataggio del sito</string>
+    <string name="date_record">Data di registrazione</string>
+    <string name="error_max_name">Il nome non può essere così lungo</string>
+    <string name="toast_location_not_found">Impossibile trovare la posizione</string>
+
+    <string name="artifact_description">Descrizione dell'artefatto</string>
+    <string name="artifact_type">Tipo</string>
+    <string name="artifact_material">Materiale</string>
+    <string name="artifact_dimensions">Dimensioni</string>
+    <string name="artifact_context">Contesto archeologico</string>
+    <string name="artifact_discovery_date">Data di scoperta</string>
+    <string name="save_artifact">Salva artefatto</string>
+    <string name="error_Type_description_required">Descrizione del tipo necessaria</string>
+    <string name="error_type_description_max">Descrizione del tipo troppo lunga</string>
+    <string name="error_artifact_description_required">Descrizione obbligatoria</string>
+    <string name="error_artifact_description_max">Massimo 300 caratteri</string>
+    <string name="error_artifact_type_required">Tipo obbligatorio</string>
+    <string name="error_artifact_type_max">Massimo 100 caratteri</string>
+    <string name="error_artifact_dimensions_max">Massimo 50 caratteri</string>
+    <string name="error_artifact_context_max">Massimo 300 caratteri</string>
+    <string name="error_material_max">Massimo 100 caratteri</string>
+    <string name="toast_artifact_saved">Artefatto salvato con successo</string>
+    <string name="toast_artifact_save_error">Errore durante il salvataggio dell'artefatto</string>
+
+    <string name="gis_data_type">Tipo di dato</string>
+    <string name="gis_coordinates">Coordinate (lat, long)</string>
+    <string name="gis_source">Fonte</string>
+    <string name="gis_description">Descrizione</string>
+    <string name="gis_data_date">Data dell'informazione (AAAA-MM-GG)</string>
+    <string name="save_gis">Salva record GIS</string>
+    <string name="error_coordinate_required">Le coordinate sono obbligatorie</string>
+    <string name="error_gis_type_required">Il tipo di dato è obbligatorio</string>
+    <string name="error_gis_type_max">Massimo 100 caratteri</string>
+    <string name="error_gis_coordinates_required">Le coordinate sono obbligatorie</string>
+    <string name="error_gis_coordinates_format">Formato non valido. Usa: lat, long</string>
+    <string name="error_gis_source_max">Massimo 100 caratteri</string>
+    <string name="error_gis_description_max">Massimo 300 caratteri</string>
+    <string name="error_gis_date_required">La data è obbligatoria</string>
+    <string name="error_coordinate_match">Le coordinate devono essere in un formato specifico, esempio: 53.350140, -6.266155</string>
+    <string name="error_source_max">Massimo 100 caratteri</string>
+    <string name="toast_gis_saved">Record GIS salvato con successo</string>
+    <string name="toast_gis_save_error">Errore durante il salvataggio del record GIS</string>
+
+    <string name="note_title">Titolo</string>
+    <string name="note_content">Contenuto</string>
+    <string name="note_date">Data</string>
+    <string name="save_note">Salva nota</string>
+    <string name="error_note_title_required">Il titolo è obbligatorio</string>
+    <string name="error_note_content_required">Il contenuto è obbligatorio</string>
+    <string name="error_note_content_max">Massimo 300 caratteri</string>
+    <string name="toast_note_saved">Nota salvata con successo</string>
+    <string name="toast_note_save_error">Errore durante il salvataggio della nota</string>
+
+    <string name="photo_title">Foto archeologica</string>
+    <string name="take_photo">Scatta foto</string>
+    <string name="photo_caption">Didascalia della foto</string>
+    <string name="sketch_title">Titolo dello schizzo</string>
+    <string name="sketch_note">Nota breve</string>
+    <string name="photo_date">Data foto/schizzo (AAAA-MM-GG)</string>
+    <string name="back_arrow_with_text">← Indietro</string>
+    <string name="error_take_photo_first">Scatta una foto prima di salvare</string>
+    <string name="error_photo_date_required">La data è obbligatoria</string>
+    <string name="toast_photo_saved">Record foto salvato con successo</string>
+    <string name="toast_photo_save_error">Errore durante il salvataggio del record foto</string>
+    <string name="error_subitles_max">Massimo 150 caratteri</string>
+    <string name="save_sketch">Salva schizzo</string>
+
+    <string name="project_title">Progetto:</string>
+    <string name="archaeological_sites">Siti archeologici</string>
+    <string name="artifacts">Artefatti</string>
+    <string name="gis_information">Informazioni GIS</string>
+    <string name="general_notes">Note generali</string>
+    <string name="photos_and_sketches">Foto e schizzi</string>
+</resources>

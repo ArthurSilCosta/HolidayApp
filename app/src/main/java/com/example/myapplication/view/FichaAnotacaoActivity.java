@@ -73,17 +73,17 @@ public class FichaAnotacaoActivity extends AppCompatActivity {
             String dataTexto = data.getText().toString().trim();
             // Validação do título
             if (tituloTexto.isEmpty()) {
-                titulo.setError("Título é obrigatório");
+                titulo.setError(getString(R.string.error_note_title_required));
                 return;
             }
             if (tituloTexto.length() > 100) {
-                titulo.setError("Máximo de 100 caracteres");
+                titulo.setError(getString(R.string.error_note_content_required));
                 return;
             }
 
             // Validação do conteúdo (opcional, mas com limite)
             if (conteudoTexto.length() > 500) {
-                conteudo.setError("Máximo de 500 caracteres");
+                conteudo.setError(getString(R.string.error_note_content_max));
                 return;
             }
 
@@ -135,7 +135,7 @@ public class FichaAnotacaoActivity extends AppCompatActivity {
 
                         finish();
             }, error -> {
-                Toast.makeText(this, "Erro ao salvar anotação.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.toast_note_saved), Toast.LENGTH_SHORT).show();
             });
         });
     }

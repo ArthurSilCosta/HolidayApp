@@ -80,7 +80,7 @@ public class ListaFichasCategoriaActivity extends AppCompatActivity {
 
         idProjeto = getIntent().getStringExtra("idProjeto");
         categoria = getIntent().getStringExtra("categoria");
-        txtCategoria.setText("Categoria: " + categoria);
+        txtCategoria.setText(getString(R.string.category) +"" + categoria);
         Log.d("DEBUG", "Categoria recebida: " + categoria);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -239,7 +239,7 @@ public class ListaFichasCategoriaActivity extends AppCompatActivity {
                     intent.putExtra("idProjeto", idProjeto);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(this, "Criação de ficha não implementada para esta categoria.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.toast_category_not_implemented), Toast.LENGTH_SHORT).show();
                 }
             });
         }

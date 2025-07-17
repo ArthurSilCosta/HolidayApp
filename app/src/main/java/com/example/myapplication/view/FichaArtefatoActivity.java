@@ -82,39 +82,39 @@ public class FichaArtefatoActivity extends AppCompatActivity {
 
             // Descrição (obrigatória)
             if (descricao.isEmpty()) {
-                inputDescricao.setError("Descrição é obrigatória");
+                inputDescricao.setError(getString(R.string.error_artifact_description_required));
                 return;
             }
             if (descricao.length() > 300) {
-                inputDescricao.setError("Máximo de 300 caracteres");
+                inputDescricao.setError(getString(R.string.error_artifact_description_max));
                 return;
             }
 
             // Tipo (obrigatório)
             if (tipo.isEmpty()) {
-                inputTipo.setError("Tipo é obrigatório");
+                inputTipo.setError(getString(R.string.error_Type_description_required));
                 return;
             }
             if (tipo.length() > 100) {
-                inputTipo.setError("Máximo de 100 caracteres");
+                inputTipo.setError(getString(R.string.error_type_description_max));
                 return;
             }
 
             // Material (opcional)
             if (material.length() > 100) {
-                inputMaterial.setError("Máximo de 100 caracteres");
+                inputMaterial.setError(getString(R.string.error_material_max));
                 return;
             }
 
             // Dimensões (opcional)
             if (dimensoes.length() > 50) {
-                inputDimensoes.setError("Máximo de 50 caracteres");
+                inputDimensoes.setError(getString(R.string.error_dimension_max));
                 return;
             }
 
             // Contexto (opcional)
             if (contexto.length() > 300) {
-                inputContexto.setError("Máximo de 300 caracteres");
+                inputContexto.setError(getString(R.string.error_context_max));
                 return;
             }
 

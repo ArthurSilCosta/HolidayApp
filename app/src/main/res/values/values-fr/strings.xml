@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Application d'Archéologie</string>
+
+    <string name="hint_project_name">Nom du projet</string>
+    <string name="dialog_new_project">Nouveau projet</string>
+    <string name="btn_create">Créer</string>
+    <string name="btn_cancel">Annuler</string>
+
+    <string name="error_invalid_project_name">Entrez un nom de projet valide</string>
+    <string name="error_project_name_required">Nom requis</string>
+    <string name="error_project_duplicate">Un projet avec ce nom existe déjà</string>
+    <string name="error_project_create">Erreur lors de la création du projet.</string>
+
+    <string name="category">Catégorie :</string>
+    <string name="photos">Photos</string>
+    <string name="sketches">Croquis</string>
+    <string name="draw_sketch">Dessiner un croquis</string>
+    <string name="create_new_record">Créer un nouvel enregistrement</string>
+    <string name="back_to_project">Retour au projet</string>
+    <string name="main_menu">Menu principal</string>
+    <string name="toast_category_not_implemented">
+        La création d'enregistrements n'est pas encore implémentée pour cette catégorie.
+    </string>
+
+    <string name="error_location">Emplacement introuvable</string>
+    <string name="max_structure_lenght">Description trop longue</string>
+    <string name="save_button">Enregistrer</string>
+    <string name="error_dimension_max">Maximum 50 caractères</string>
+    <string name="back_to_category">Retour</string>
+    <string name="site_name">Nom du site</string>
+    <string name="location">Emplacement</string>
+    <string name="researcher">Chercheur</string>
+    <string name="error_context_max">Maximum 300 caractères</string>
+    <string name="description">Description</string>
+    <string name="soil_colour">Couleur du sol</string>
+    <string name="soil_type">Type de sol</string>
+    <string name="error_site_name_required">Le nom du site est obligatoire</string>
+    <string name="error_location_required">L'emplacement est obligatoire</string>
+    <string name="error_description_max">Maximum 300 caractères</string>
+    <string name="toast_site_saved">Site enregistré avec succès</string>
+    <string name="toast_site_save_error">Erreur lors de l'enregistrement du site</string>
+    <string name="date_record">Date d'enregistrement</string>
+    <string name="error_max_name">Le nom ne peut pas être aussi long</string>
+    <string name="toast_location_not_found">L'emplacement n'a pas pu être trouvé</string>
+
+    <string name="artifact_description">Description de l'artefact</string>
+    <string name="artifact_type">Type</string>
+    <string name="artifact_material">Matériau</string>
+    <string name="artifact_dimensions">Dimensions</string>
+    <string name="artifact_context">Contexte archéologique</string>
+    <string name="artifact_discovery_date">Date de découverte</string>
+    <string name="save_artifact">Enregistrer l'artefact</string>
+    <string name="error_Type_description_required">La description du type est requise</string>
+    <string name="error_type_description_max">Description du type trop longue</string>
+    <string name="error_artifact_description_required">La description est requise</string>
+    <string name="error_artifact_description_max">Maximum 300 caractères</string>
+    <string name="error_artifact_type_required">Le type est requis</string>
+    <string name="error_artifact_type_max">Maximum 100 caractères</string>
+    <string name="error_artifact_dimensions_max">Maximum 50 caractères</string>
+    <string name="error_artifact_context_max">Maximum 300 caractères</string>
+    <string name="error_material_max">Maximum 100 caractères</string>
+    <string name="toast_artifact_saved">Artefact enregistré avec succès</string>
+    <string name="toast_artifact_save_error">Erreur lors de l'enregistrement de l'artefact</string>
+
+    <string name="gis_data_type">Type de données</string>
+    <string name="gis_coordinates">Coordonnées (lat, long)</string>
+    <string name="gis_source">Source</string>
+    <string name="gis_description">Description</string>
+    <string name="gis_data_date">Date de l'information (AAAA-MM-JJ)</string>
+    <string name="save_gis">Enregistrer l'enregistrement GIS</string>
+    <string name="error_coordinate_required">Les coordonnées sont obligatoires</string>
+    <string name="error_gis_type_required">Le type de données est obligatoire</string>
+    <string name="error_gis_type_max">Maximum 100 caractères</string>
+    <string name="error_gis_coordinates_required">Les coordonnées sont obligatoires</string>
+    <string name="error_gis_coordinates_format">Format invalide. Utilisez : lat, long</string>
+    <string name="error_gis_source_max">Maximum 100 caractères</string>
+    <string name="error_gis_description_max">Maximum 300 caractères</string>
+    <string name="error_gis_date_required">La date est obligatoire</string>
+    <string name="error_coordinate_match">Les coordonnées doivent être dans un format spécifique, exemple : 53.350140, -6.266155</string>
+    <string name="error_source_max">Maximum 100 caractères</string>
+    <string name="toast_gis_saved">Enregistrement GIS enregistré avec succès</string>
+    <string name="toast_gis_save_error">Erreur lors de l'enregistrement de l'enregistrement GIS</string>
+
+    <string name="note_title">Titre</string>
+    <string name="note_content">Contenu</string>
+    <string name="note_date">Date</string>
+    <string name="save_note">Enregistrer la note</string>
+    <string name="error_note_title_required">Le titre est requis</string>
+    <string name="error_note_content_required">Le contenu est requis</string>
+    <string name="error_note_content_max">Maximum 300 caractères</string>
+    <string name="toast_note_saved">Note enregistrée avec succès</string>
+    <string name="toast_note_save_error">Erreur lors de l'enregistrement de la note</string>
+
+    <string name="photo_title">Photo archéologique</string>
+    <string name="take_photo">Prendre une photo</string>
+    <string name="photo_caption">Légende de la photo</string>
+    <string name="sketch_title">Titre du croquis</string>
+    <string name="sketch_note">Brève note</string>
+    <string name="photo_date">Date de la photo/croquis (AAAA-MM-JJ)</string>
+    <string name="back_arrow_with_text">← Retour</string>
+    <string name="error_take_photo_first">Prenez une photo avant d'enregistrer</string>
+    <string name="error_photo_date_required">La date est obligatoire</string>
+    <string name="toast_photo_saved">Photo enregistrée avec succès</string>
+    <string name="toast_photo_save_error">Erreur lors de l'enregistrement de la photo</string>
+    <string name="error_subitles_max">Maximum 150 caractères</string>
+    <string name="save_sketch">Enregistrer le croquis</string>
+
+    <string name="project_title">Projet :</string>
+    <string name="archaeological_sites">Sites archéologiques</string>
+    <string name="artifacts">Artefacts</string>
+    <string name="gis_information">Informations GIS</string>
+    <string name="general_notes">Notes générales</string>
+    <string name="photos_and_sketches">Photos et croquis</string>
+</resources>

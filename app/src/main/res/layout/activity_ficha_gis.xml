@@ -11,7 +11,7 @@
 
         <EditText
             android:id="@+id/input_tipo_dado"
-            android:hint="Tipo de Dado"
+            android:hint="@string/gis_data_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
@@ -19,7 +19,7 @@
 
         <EditText
             android:id="@+id/input_coordenadas"
-            android:hint="Coordenadas (lat, long)"
+            android:hint="@string/gis_coordinates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
@@ -27,7 +27,7 @@
 
         <EditText
             android:id="@+id/input_fonte"
-            android:hint="Fonte"
+            android:hint="@string/gis_source"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
@@ -35,14 +35,14 @@
 
         <EditText
             android:id="@+id/input_descricao"
-            android:hint="Descrição"
+            android:hint="@string/gis_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:padding="12dp" />
         <EditText
             android:id="@+id/input_data_gis"
-            android:hint="Data da Informação (AAAA-MM-DD)"
+            android:hint="@string/gis_data_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
@@ -55,7 +55,7 @@
             android:id="@+id/btn_voltar_categoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="←"
+            android:drawableLeft="@drawable/baseline_arrow_back_24"
             android:textSize="20sp"
             android:layout_margin="8dp"
             android:background="@android:color/transparent"
@@ -63,7 +63,7 @@
 
         <Button
             android:id="@+id/btn_salvar_gis"
-            android:text="Salvar Ficha GIS"
+            android:text="@string/save_gis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
