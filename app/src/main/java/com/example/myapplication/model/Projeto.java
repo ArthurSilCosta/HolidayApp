@@ -29,7 +29,17 @@ public class Projeto extends RealmObject {
         this.nome = nome;
     }
 
-    public void setDataCriacao(Date dataCriacao) {
+    private String data; // ou Date, dependendo do seu uso
+
+    private Date dataCriacao;
+
+    public Date getDataCriacao() {
+        return dataCriacao;
     }
+
+    public void setDataCriacao(Date dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
 
 }

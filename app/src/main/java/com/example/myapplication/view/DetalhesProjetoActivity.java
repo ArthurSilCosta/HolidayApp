@@ -24,7 +24,10 @@ import com.example.myapplication.model.Projeto;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import io.realm.Realm;
 
@@ -146,7 +149,7 @@ public class DetalhesProjetoActivity extends AppCompatActivity {
         canvas.drawText("=== Artefatos ===", 50, y, titlePaint);
         y += 25;
         for (FichaArtefato artefato : artefatos) {
-            y = verificarNovaPagina(pdf, page, y, pageWidth, pageHeight);
+            y = verificarNovaPagina(pdf, page, y );
             canvas = page.getCanvas();
 
             canvas.drawText("- Tipo: " + artefato.getTipoArtefato(), 50, y, paint);
@@ -166,7 +169,7 @@ public class DetalhesProjetoActivity extends AppCompatActivity {
         canvas.drawText("=== Informações GIS ===", 50, y, titlePaint);
         y += 25;
         for (FichaGIS gis : gisList) {
-            y = verificarNovaPagina(pdf, page, y, pageWidth, pageHeight);
+            y = verificarNovaPagina(pdf, page, y );
             canvas = page.getCanvas();
 
             canvas.drawText("- Tipo: " + gis.getTipoDado(), 50, y, paint);
@@ -186,7 +189,7 @@ public class DetalhesProjetoActivity extends AppCompatActivity {
         canvas.drawText("=== Anotações Gerais ===", 50, y, titlePaint);
         y += 25;
         for (FichaAnotacao anotacao : anotacoes) {
-            y = verificarNovaPagina(pdf, page, y, pageWidth, pageHeight);
+            y = verificarNovaPagina(pdf, page, y );
             canvas = page.getCanvas();
 
             canvas.drawText("- Título: " + anotacao.getTitulo(), 50, y, paint);
@@ -202,7 +205,7 @@ public class DetalhesProjetoActivity extends AppCompatActivity {
         canvas.drawText("=== Fotos ===", 50, y, titlePaint);
         y += 25;
         for (FichaImagem img : imagens) {
-            y = verificarNovaPagina(pdf, page, y, pageWidth, pageHeight);
+            y = verificarNovaPagina(pdf, page, y );
             canvas = page.getCanvas();
 
             canvas.drawText("- Legenda: " + img.getLegenda(), 50, y, paint);
@@ -218,14 +221,17 @@ public class DetalhesProjetoActivity extends AppCompatActivity {
         canvas.drawText("=== Croquis ===", 50, y, titlePaint);
         y += 25;
         for (FichaCroqui c : croquis) {
-            y = verificarNovaPagina(pdf, page, y, pageWidth, pageHeight);
+            y = verificarNovaPagina(pdf, page, y );
             canvas = page.getCanvas();
 
             canvas.drawText("- Título: " + c.getTitulo(), 50, y, paint);
             y += 18;
             canvas.drawText("  Anotação: " + c.getAnotacao(), 50, y, paint);
             y += 18;
-            canvas.drawText("  Data: " + c.getData(), 50, y, paint);
+            canvas.drawText("Data de Criação: " +
+                    new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new
+
+                            Date()), 50, y, paint);
             y += 25;
         }
         pdf.finishPage(page);
@@ -244,7 +250,9 @@ public class DetalhesProjetoActivity extends AppCompatActivity {
         pdf.close();
     }
     private int verificarNovaPagina(PdfDocument pdf, PdfDocument.Page page,
-                                    int y, int pageWidth, int pageHeight) {
+                                    int y ) {
+        int pageHeight = 842;
+        int pageWidth = 595;
         if (y > pageHeight - 50) {
             pdf.finishPage(page);
             PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pdf.getPages().size() + 1).create();

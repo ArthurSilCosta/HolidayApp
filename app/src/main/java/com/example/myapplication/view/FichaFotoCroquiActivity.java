@@ -3,13 +3,21 @@ package com.example.myapplication.view;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.*;
+import android.Manifest;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+
 import com.example.myapplication.R;
 import com.example.myapplication.model.FichaImagem;
 
@@ -34,6 +42,7 @@ public class FichaFotoCroquiActivity extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private EditText inputData;
+    private static final int CAMERA_PERMISSION_CODE = 2001;
 
     private ImageView imagePreview;
     private EditText inputLegenda, inputTituloCroqui, inputAnotacaoCroqui;
@@ -95,9 +104,17 @@ public class FichaFotoCroquiActivity extends AppCompatActivity {
     }
 
     private void abrirCamera() {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CAMERA},
+                    CAMERA_PERMISSION_CODE);
+        } else {
+            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
+        }
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -196,6 +213,20 @@ public class FichaFotoCroquiActivity extends AppCompatActivity {
             Toast.makeText(this, "Erro ao salvar ficha", Toast.LENGTH_SHORT).show();
         });
     }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == CAMERA_PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                abrirCamera(); // tenta abrir a câmera novamente
+            } else {
+                Toast.makeText(this, "Permissão da câmera é necessária para tirar fotos", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
 
     @Override
     protected void onDestroy() {
