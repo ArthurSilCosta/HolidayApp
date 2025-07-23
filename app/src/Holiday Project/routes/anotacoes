@@ -1,0 +1,15 @@
+const express = require('express');
+const router = express.Router();
+const Anotacao = require('../models/anotacao');
+
+router.post('/', async (req, res) => {
+  try {
+    const anotacao = new Anotacao(req.body);
+    await anotacao.save();
+    res.status(201).json(anotacao);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+module.exports = router;
